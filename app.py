@@ -11,13 +11,12 @@ app = Flask(__name__)
 app.secret_key = "your-secret-key"
 
 # ----------------- PostgreSQL Config -----------------
-POSTGRES_CONFIG = {
-    'host': 'localhost',
-    'user': 'postgres',
-    'password': '1234',
-    'dbname': 'quiz_db'
+PG_CONFIG = {
+    'host': 'dpg-d1br9kbe5dus73esr1hg-a',
+    'user': 'quiz_db_4gch_user',
+    'password': 'kXoWWGPKSjq52aM1H8hX0qp2KFQbj5KZ',
+    'dbname': 'quiz_db_4gch'
 }
-
 def get_db_connection():
     try:
         return psycopg2.connect(**POSTGRES_CONFIG)
@@ -248,5 +247,5 @@ def create_tables():
 # ----------------- Main -----------------
 if __name__ == "__main__":
     create_tables()
-    #port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, port=int(os.environ.get("PORT", 5000)),host="0.0.0.0")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, port=port, host="0.0.0.0")
