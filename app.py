@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.secret_key = "your-secret-key"
 
 # ----------------- PostgreSQL Config -----------------
-PG_CONFIG = {
+POSTGRES_CONFIG = {
     'host': 'dpg-d1br9kbe5dus73esr1hg-a',
     'user': 'quiz_db_4gch_user',
     'password': 'kXoWWGPKSjq52aM1H8hX0qp2KFQbj5KZ',
