@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: flask-quiz-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://quiz_db_4gch_user:kXoWWGPKSjq52aM1H8hX0qp2KFQbj5KZ@dpg-d1br9kbe5dus73esr1hg-a/quiz_db_4gch
+      - key: PORT
+        value: 10000

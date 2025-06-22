@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">QueAns</div>
+    <div class="auth">
+      <form action="/logout" method="get">
+        <button type="submit" class="logout">Logout</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <h1>Quiz</h1>
+    <div id="timer" style="font-weight: bold; color: red; margin-bottom: 10px;"></div>
+    <div id="quiz-container">
+      <form id="quiz-form">
+        <div id="questions-list"></div>
+        <button type="button" id="submit-quiz" class="button">Submit Quiz</button>
+      </form>
+      <div id="result"></div>
+      <div id="score"></div>
+    </div>
+  </main>
+
+  <!-- 🛠️ Questions are stored safely inside a script tag with text/plain -->
+  <script type="text/plain" id="question-data">{{ questions }}</script>
+
+  <!-- ✅ Safe JS assignment -->
+  <script>
+    const questionsText = document.getElementById('question-data').textContent;
+    const attemptId = "{{ attempt_id }}";
+  </script>
+
+  <!-- JS logic -->
+  <script src="/static/js/quiz.js"></script>
+  <script src="secure.js"></script>
+
+</body>
+</html>

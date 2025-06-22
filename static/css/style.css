@@ -1,0 +1,232 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.auth button, .logout {
+  margin-left: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.auth button:hover, .logout:hover {
+  background-color: #0056b3;
+}
+
+main {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  margin-top: 60px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+textarea, input[type="text"], input[type="password"] {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px 14px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+textarea:focus, input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+button#generate, form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.05em;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover, #generate:hover {
+  background-color: #218838;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.flash {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+.flash.success { background-color: #d4edda; color: #155724; }
+.flash.danger { background-color: #f8d7da; color: #721c24; }
+.flash.info { background-color: #d1ecf1; color: #0c5460; }
+
+#output {
+  white-space: pre-wrap;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-family: monospace;
+}
+
+a.button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+  background-color: #0056b3;
+}
+
+p a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+/* Quiz Input Page Styles */
+#quiz-container select, #quiz-container input[type="text"] {
+  margin-bottom: 15px;
+}
+
+#quiz-container p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Quiz Page Styles */
+#quiz-container {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.question-block {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.question {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.options label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.question-result {
+  margin: 5px 0;
+}
+
+#score {
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #222;
+}
+#score-container {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#score-container p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
